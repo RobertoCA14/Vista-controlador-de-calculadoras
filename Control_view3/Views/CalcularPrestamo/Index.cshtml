@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Calculador de Prestamo";
+}
+
+<div class="row">
+    <div class="col-md-12 bg-dark text-info mb-3 br-12">
+        <h1 class="align-text-top text-center">Calculadora de Préstamos</h1>
+    </div>
+</div>
+
+<form method="post" asp-controller="CalcularPrestamo" asp-action="Index">
+    <div class="row justify-content-center">
+        <div class="col-md-4 align-items-center">
+            <div class="card-header bg-info text-black">
+                <h4 class="text-center text-decoration-underline">Realiza el Calculo de tu préstamo</h4>
+                <div class="text-center mb-0 mt-3">
+                   
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3">Monto del préstamo</label>
+                    <input class="form-select fw-bold" type="number" min="1" name="m" />
+
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3">Préstamo</label>
+                    <select class="form-select" aria-label="Default select example" name="tp">
+                        <option selected>Tipo de Préstamo</option>
+                        <option value="1">Personal 22%</option>
+                        <option value="2">Automóvil 12%</option>
+                        <option value="3">Hipotecario 8%</option>
+                    </select>
+
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3">Tasa de Interes</label>
+                    <input class="form-select fw-bold" type="text" readonly disabled/>
+
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3">Meses del préstamo</label>
+                    <select class="form-select" aria-label="Default select example" name="meses">
+                        <option selected>Vigencia del préstamo</option>
+                        <option value="12">12 meses</option>
+                        <option value="18">18 meses</option>
+                        <option value="24">24 meses</option>
+                        <option value="30">30 meses</option>
+                        <option value="36">36 meses</option>
+                        <option value="42">42 meses</option>
+                        <option value="48">48 meses</option>
+                        <option value="54">54 meses</option>
+                        <option value="60">60 meses</option>
+                        <option value="66">66 meses</option>
+                        <option value="72">72 meses</option>
+                        <option value="78">78 meses</option>
+                        <option value="84">84 meses</option>
+                        <option value="90">90 meses</option>
+                        <option value="96">96 meses</option>
+                        <option value="102">102 meses</option>
+                        <option value="108">108 meses</option>
+                        <option value="114">114 meses</option>
+                        <option value="120">120 meses</option>
+                    </select>
+
+                    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                        <button id="boton" type="submit" class="btn btn-dark text-white fw-bold mx-auto">Calcular</button>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                    <h4 class="mx-auto">@ViewBag.pre</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

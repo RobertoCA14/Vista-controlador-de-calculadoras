@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Cambio de Divisas";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 bg-dark text-danger justify-content-center mb-3 br-12">
+        <h2 class="align-text-top text-center text-uppercase fst-italic">Cambio de divisa</h2>
+        </div>
+</div>
+
+<form method="post" asp-controller="Divisas" asp-action="Index">
+    <div class="row justify-content-center">
+        <div class="col-md-6 align-items-center">
+            <div class=" bg-secondary card-header text-black">
+                <h2 class="text-center text-uppercase text-danger fst-italic">Calcular el cambio de divisa</h2>
+             <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3 text-white">Divisa</label>
+                    <select class="form-select bg-light" aria-label="Default select example" name="m1">
+                        <option selected>Cambio de Divisa</option>
+                        <option value="1">PESO a DOLLAR</option>
+                        <option value="2">DOLLAR a PESO</option>
+                        <option value="3">DOP$ a EURO</option>
+                        <option value="4">EURO a PESO</option>
+                        <option value="5">DOLLAR a EURO</option>
+                        <option value="6">EURO a DOLLAR</option>
+                    </select>
+
+                    <label for="exampleFormControlInput1" class="form-label fw-bold mt-3 text-white ">Cantidad</label>
+                    <input placeholder=" Cantidad de divisa a calcular" class="form-select bg-light" type="number" min="1" name="m2" />
+                    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                        <button type="submit" class="btn btn-outline-danger fw-bold mx-auto ">Calcular divisa</button>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto mt-3">
+                    <h4 class="mx-auto">@ViewBag.re</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
